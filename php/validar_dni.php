@@ -1,9 +1,9 @@
 <?php
 // Configuración de conexión
-$host = "localhost";
-$dbname = "valinor";
-$user = "henri";
-$pass = "henri";
+$host = "sql100.byethost7.com";
+$dbname = "b7_40510877_valinor";
+$user = "b7_40510877";
+$pass = "4jyvgxcr";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
