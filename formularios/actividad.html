@@ -4,19 +4,8 @@
     <meta charset="UTF-8">
     <title>Registro de Actividades</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilos/forms.css">
-    <script>
-        // Función para añadir nuevos campos de invitados
-        function agregarInvitado() {
-            const contenedor = document.getElementById("invitados");
-            const nuevoCampo = document.createElement("input");
-            nuevoCampo.type = "text";
-            nuevoCampo.name = "dni_invitados[]";
-            nuevoCampo.placeholder = "DNI del invitado";
-            contenedor.appendChild(document.createElement("br"));
-            contenedor.appendChild(nuevoCampo);
-        }
-    </script>
+
+    <link rel="stylesheet" href="../estilos/forms.css"
 </head>
 <body>
     <h1>Registrar Actividad</h1>
@@ -30,11 +19,10 @@
         <label for="tipo">Tipo de actividad:</label>
         <select id="tipo" name="tipo" required>
             <option value="">-- Selecciona --</option>
-            <option value="cultural">Juegos de Mesa</option>
-            <option value="deportiva">Juegos de Rol</option>
-            <option value="formativa">Warhammer</option>
-            <option value="social">Taller</option>
-            <option value="social">Varios</option>
+            <option value="cultural">Cultural</option>
+            <option value="deportiva">Deportiva</option>
+            <option value="formativa">Formativa</option>
+            <option value="social">Social</option>
         </select>
         
         <!-- Día y hora -->
@@ -70,10 +58,11 @@
         <div id="invitados">
             <input type="text" name="dni_invitados[]" placeholder="DNI del invitado">
         </div>
-        <button type="button" onclick="agregarInvitado()">Añadir otro invitado</button>
+        <button type="button" id="btnAgregarInvitado">Añadir otro invitado</button>
         
         <br><br>
         <input type="submit" value="Registrar Actividad">
     </form>
+<script src="../scripts/agregarinvitado.js"></script>
 </body>
 </html>
