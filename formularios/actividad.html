@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Actividades</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/forms.css">
+    <script>
+        // Función para añadir nuevos campos de invitados
+        function agregarInvitado() {
+            const contenedor = document.getElementById("invitados");
+            const nuevoCampo = document.createElement("input");
+            nuevoCampo.type = "text";
+            nuevoCampo.name = "dni_invitados[]";
+            nuevoCampo.placeholder = "DNI del invitado";
+            contenedor.appendChild(document.createElement("br"));
+            contenedor.appendChild(nuevoCampo);
+        }
+    </script>
+</head>
+<body>
+    <h1>Registrar Actividad</h1>
+    <form action="procesar_actividad.php" method="post">
+        
+        <!-- Nombre de la actividad -->
+        <label for="nombre">Nombre de la actividad:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <!-- Tipo de actividad -->
+        <label for="tipo">Tipo de actividad:</label>
+        <select id="tipo" name="tipo" required>
+            <option value="">-- Selecciona --</option>
+            <option value="cultural">Juegos de Mesa</option>
+            <option value="deportiva">Juegos de Rol</option>
+            <option value="formativa">Warhammer</option>
+            <option value="social">Taller</option>
+            <option value="social">Varios</option>
+        </select>
+        
+        <!-- Día y hora -->
+        <label for="fecha">Día de la actividad:</label>
+        <input type="date" id="fecha" name="fecha" required>
+        
+        <label for="hora">Hora de inicio:</label>
+        <input type="time" id="hora" name="hora" required>
+        
+        <!-- Socio responsable -->
+        <label for="responsable">Socio responsable:</label>
+        <select id="responsable" name="responsable" required>
+            <option value="">-- Selecciona --</option>
+            <option value="socio1">Socio 1</option>
+            <option value="socio2">Socio 2</option>
+            <!-- ... hasta socio40 -->
+            <option value="socio40">Socio 40</option>
+        </select>
+        
+        <!-- Socios asistentes -->
+        <label for="asistentes">Socios asistentes:</label>
+        <select id="asistentes" name="asistentes[]" multiple size="5">
+            <option value="socio1">Socio 1</option>
+            <option value="socio2">Socio 2</option>
+            <option value="socio3">Socio 3</option>
+            <!-- ... hasta socio40 -->
+            <option value="socio40">Socio 40</option>
+        </select>
+        <small>Puedes seleccionar varios socios deslizando o manteniendo pulsado.</small>
+        
+        <!-- Invitados -->
+        <h2>Invitados</h2>
+        <div id="invitados">
+            <input type="text" name="dni_invitados[]" placeholder="DNI del invitado">
+        </div>
+        <button type="button" onclick="agregarInvitado()">Añadir otro invitado</button>
+        
+        <br><br>
+        <input type="submit" value="Registrar Actividad">
+    </form>
+</body>
+</html>

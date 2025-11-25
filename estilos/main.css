@@ -1,0 +1,59 @@
+/* Fondo general con degradado brillante */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    text-align: center;
+}
+
+/* Encabezado principal */
+h1 {
+    margin-top: 60px;
+    font-size: 2.5em;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* Texto introductorio */
+p {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 1.2em;
+    line-height: 1.6;
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+}
+
+/* Botones estilo Frutiger Aero */
+a {
+    display: inline-block;
+    margin: 20px;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(180deg, #4facfe, #00f2fe);
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    background: linear-gradient(180deg, #43e97b, #38f9d7);
+}
+
+/* Footer estilo Frutiger Aero */
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    border-top: 2px solid rgba(255,255,255,0.3);
+    color: #e0f7fa;
+    font-size: 0.9em;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
