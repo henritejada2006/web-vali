@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Registrar Actividad</h1>
-    <form action="procesar_actividad.php" method="post">
+    <form action="../php/procesar_actividad.php" method="post">
         
         <!-- Nombre de la actividad -->
         <label for="nombre">Nombre de la actividad:</label>
@@ -19,10 +19,11 @@
         <label for="tipo">Tipo de actividad:</label>
         <select id="tipo" name="tipo" required>
             <option value="">-- Selecciona --</option>
-            <option value="cultural">Cultural</option>
-            <option value="deportiva">Deportiva</option>
-            <option value="formativa">Formativa</option>
-            <option value="social">Social</option>
+            <option value="cultural">Juegos de mesa</option>
+            <option value="deportiva">Juegos de rol</option>
+            <option value="formativa">Taller</option>
+            <option value="social">Warhammer</option>
+            <option value="social">Varios</option>
         </select>
         
         <!-- Día y hora -->
