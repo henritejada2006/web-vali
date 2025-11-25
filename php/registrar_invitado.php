@@ -25,9 +25,26 @@ try {
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$nombre, $dni, $cp]);
 
-    echo "Invitado registrado correctamente.";
 } catch (PDOException $e) {
     // Captura errores de SQL (por ejemplo, DNI duplicado)
     echo "Error en la base de datos: " . $e->getMessage();
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Invitado registrado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace al CSS externo -->
+    <link rel="stylesheet" href="../estilos/confirmacion.css">
+</head>
+<body>
+    <div class="mensaje">
+        <h1>✅ Invitado registrado correctamente</h1>
+        <p>El invitado se ha guardado en la base de datos.</p>
+        <a href="../index.html" class="boton">Ir al menú principal</a>
+    </div>
+</body>
+</html>
